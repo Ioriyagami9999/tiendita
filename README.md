@@ -57,13 +57,16 @@ Swagger: http://localhost:5251/swagger
 
 Estructura del Proyecto:
 
-tiendita/
-├── Controllers/     # Controladores de la API
-├── Models/          # Modelos de datos
-├── Data/            # Contexto de base de datos
-├── Migrations/      # Migraciones de EF Core
-├── public/          # Frontend (archivos estáticos)
-└── Program.cs       # Punto de entrada
+
+### 🔹 Descripción de carpetas
+
+- **Controllers/** → Contiene los controladores que manejan las rutas y lógica de la API.  
+- **Models/** → Define las entidades y modelos de datos usados por la aplicación.  
+- **Data/** → Contiene el contexto de la base de datos y configuraciones de EF Core.  
+- **Migrations/** → Guarda las migraciones generadas por EF Core para crear/actualizar la DB.  
+- **public/** → Archivos estáticos del frontend (HTML, CSS, JS).  
+- **Program.cs** → Punto de entrada de la aplicación, donde se configura y arranca el servidor.
+
 
 Base de Datos:
 - SQLite se crea automáticamente al ejecutar la app por primera vez.
