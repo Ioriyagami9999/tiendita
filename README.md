@@ -1,85 +1,89 @@
-# Tiendita - Guía de Instalación y Ejecución
+🛒 Tiendita - Guía de Instalación y Ejecución
+Esta guía te ayudará a configurar y ejecutar el proyecto Tiendita en tu entorno local.
 
-Este documento tiene como objetivo **visualizar el proceso para descargar e implementar el proyecto Tiendita**, incluyendo dependencias, migraciones y acceso al frontend.
+📋 Prerrequisitos
+.NET SDK (versión compatible con el proyecto)
 
----
+Git
 
-## 1️⃣ Aceptar invitación
+Navegador web moderno
 
-Antes de comenzar, debes **aceptar la invitación para ser colaborador del proyecto** en GitHub.  
-Sin acceso, no podrás clonar ni trabajar con el repositorio.
+🚀 Inicio Rápido
+1. Obtener acceso al proyecto
+Asegúrate de haber aceptado la invitación como colaborador en el repositorio de GitHub.
 
----
-
-## 2️⃣ Clonar el proyecto
-
-Abre una terminal y ejecuta:
-
-```bash
+2. Clonar el repositorio
+bash
 git clone git@github.com:Ioriyagami9999/tiendita.git
 cd tiendita
-```
-
-Esto descargará el proyecto en tu computadora y te situará dentro de la carpeta del proyecto.
-
----
-
-## 3️⃣ Instalar herramientas y paquetes necesarios
-
-Instala la herramienta global de Entity Framework Core:
-
-```bash
+3. Configurar el entorno
+bash
+# Instalar herramientas globales de EF Core
 dotnet tool install --global dotnet-ef
-```
 
-Luego, agrega el paquete de diseño necesario al proyecto:
-
-```bash
+# Agregar paquete de diseño de Entity Framework
 dotnet add package Microsoft.EntityFrameworkCore.Design
-```
 
----
-
-## 4️⃣ Restaurar dependencias de NuGet
-
-Para instalar todas las librerías necesarias definidas en el proyecto:
-
-```bash
+# Restaurar dependencias de NuGet
 dotnet restore
-```
-
----
-
-## 5️⃣ Ejecutar el proyecto
-
-Para crear la base de datos SQLite y aplicar las migraciones automáticamente, ejecuta:
-
-```bash
+4. Ejecutar la aplicación
+bash
 dotnet run
-```
+5. Acceder a la aplicación
+Frontend: http://localhost:5251/
 
-- Esto iniciará la aplicación en **modo desarrollo**.  
-- La API estará disponible en `/api/productos`.  
-- Swagger se podrá acceder (si está habilitado) en `/swagger`.  
+API: http://localhost:5251/api/productos
 
----
+Swagger: http://localhost:5251/swagger
 
-## 6️⃣ Acceder al frontend
+🔧 Configuración Detallada
+Estructura del Proyecto
+text
+tiendita/
+├── Controllers/     # Controladores de la API
+├── Models/          # Modelos de datos
+├── Data/            # Contexto de base de datos
+├── Migrations/      # Migraciones de EF Core
+├── public/          # Frontend (archivos estáticos)
+└── Program.cs       # Punto de entrada
+Base de Datos
+El proyecto utiliza SQLite como base de datos, que se crea automáticamente al ejecutar la aplicación por primera vez.
 
-Una vez que la aplicación esté corriendo, abre tu navegador en:
+Personalización
+Puedes modificar el puerto de ejecución editando el archivo Properties/launchSettings.json o configurando la variable de entorno:
 
-```
-http://localhost:5251/
-```
+bash
+export ASPNETCORE_URLS="http://localhost:5000"
+🧪 Funcionalidades Disponibles
+Visualización de productos en formato de tabla
 
-- Aquí se encuentra el **index.html** que permite:  
-  - Visualizar los productos en una tabla  
-  - Agregar nuevos productos  
-  - Eliminar productos existentes  
+Agregar nuevos productos mediante formulario
 
----
+Eliminar productos existentes
 
-✅ **Notas adicionales**
+Documentación API interactiva con Swagger
 
-- El puerto puede configurarse en `launchSettings.json` o usando la variable de entorno `ASPNETCORE_URLS`.  
-- Asegúrate de que no haya conflictos entre la carpeta `public` y la ruta de Swagger (`/swagger`).
+❓ Solución de Problemas
+Error de permisos
+Si encuentras problemas al clonar el repositorio, verifica que:
+
+Has aceptado la invitación como colaborador
+
+Tu clave SSH está configurada correctamente en GitHub
+
+Puerto en uso
+Si el puerto 5251 está ocupado, la aplicación intentará usar otro puerto disponible. Revisa la consola para ver en qué puerto se está ejecutando.
+
+Conflictos de rutas
+Si experimentas problemas con las rutas, verifica que no haya conflictos entre la carpeta public y el endpoint de Swagger.
+
+📞 Soporte
+Si encuentras problemas durante la instalación o ejecución:
+
+Revisa los mensajes de error en la consola
+
+Verifica que todas las dependencias estén correctamente instaladas
+
+Asegúrate de tener la versión correcta de .NET SDK
+
+¡Listo! Ahora deberías tener Tiendita funcionando en tu máquina local. 🎉
