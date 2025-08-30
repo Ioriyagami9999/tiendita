@@ -7,7 +7,7 @@ Esta guía te ayudará a configurar y ejecutar el proyecto Tiendita en tu entorn
 📋 Prerrequisitos
 
 Antes de iniciar, asegúrate de tener instalados:  
-- .NET SDK (versión compatible con el proyecto)  
+- .NET SDK (versión compatible con el proyecto)  8.0
 - Git  
 - Navegador web moderno
 
@@ -71,9 +71,6 @@ Estructura del Proyecto:
 Base de Datos:
 - SQLite se crea automáticamente al ejecutar la app por primera vez.
 
-Personalización del puerto:
-
-$ export ASPNETCORE_URLS="http://localhost:5000"
 
 ---
 
@@ -83,25 +80,7 @@ $ export ASPNETCORE_URLS="http://localhost:5000"
 - Agregar nuevos productos mediante formulario  
 - Eliminar productos existentes  
 - Documentación interactiva de la API con Swagger
+----
 
----
-
-❓ Solución de Problemas
-
-Puerto en uso:  
-- Si el puerto 5251 está ocupado, la app usará otro puerto disponible. Revisa la consola.
-
-Conflictos de rutas:  
-- Evita conflictos entre la carpeta public y el endpoint de Swagger.
-
----
-
-📞 Soporte
-
-- Revisa los mensajes de error en la consola  
-- Asegúrate de tener todas las dependencias instaladas  
-- Verifica que la versión de .NET SDK sea la correcta
-
----
 
 ¡Listo! Ahora deberías tener Tiendita funcionando en tu máquina local.
