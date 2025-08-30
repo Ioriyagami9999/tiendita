@@ -19,26 +19,25 @@ Antes de iniciar, asegúrate de tener instalados:
 
 Abre tu terminal y ejecuta:
 
-$ git clone git@github.com:Ioriyagami9999/tiendita.git
-$ cd tiendita
+git clone https://github.com/Ioriyagami9999/tiendita.git
+cd tiendita
 
 2️⃣ Configurar el entorno
 
 Instalar herramientas globales de EF Core:
 
-$ dotnet tool install --global dotnet-ef
+ dotnet tool install --global dotnet-ef
 
 Agregar paquete de diseño de Entity Framework:
-
-$ dotnet add package Microsoft.EntityFrameworkCore.Design
+ dotnet add package Microsoft.EntityFrameworkCore.Design
 
 Restaurar dependencias de NuGet:
 
-$ dotnet restore
+ dotnet restore
 
 3️⃣ Ejecutar la aplicación
 
-$ dotnet run
+  dotnet run
 
 - La base de datos SQLite se creará automáticamente al ejecutar la app.  
 - La aplicación se ejecutará en modo desarrollo.
