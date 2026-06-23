@@ -1,10 +1,10 @@
-🛒 Tiendita - Guía de Instalación y Ejecución
+ Tiendita - Guía de Instalación y Ejecución
 
 Esta guía te ayudará a configurar y ejecutar el proyecto Tiendita en tu entorno local.
 
 ---
 
-📋 Prerrequisitos
+ Prerrequisitos
 
 Antes de iniciar, asegúrate de tener instalados:  
 - .NET SDK (versión compatible con el proyecto)  8.0
@@ -13,16 +13,16 @@ Antes de iniciar, asegúrate de tener instalados:
 
 ---
 
-🚀 Inicio Rápido
+ Inicio Rápido
 
-1️⃣ Clonar el repositorio
+ Clonar el repositorio
 
 Abre tu terminal y ejecuta:
 
 git clone https://github.com/Ioriyagami9999/tiendita.git
 cd tiendita
 
-2️⃣ Configurar el entorno
+ Configurar el entorno
 
 Instalar herramientas globales de EF Core:
 
@@ -35,7 +35,7 @@ Restaurar dependencias de NuGet:
 
  dotnet restore
 
-3️⃣ Ejecutar la aplicación
+ Ejecutar la aplicación
 
   dotnet run
 
@@ -44,7 +44,7 @@ Restaurar dependencias de NuGet:
 
 ---
 
-🌐 Acceder a la aplicación
+ Acceder a la aplicación
 
 Frontend: http://localhost:5251/  
 API: http://localhost:5251/api/productos  
@@ -52,12 +52,12 @@ Swagger: http://localhost:5251/swagger
 
 ---
 
-🔧 Configuración Detallada
+ Configuración Detallada
 
 Estructura del Proyecto:
 
 
-### 🔹 Descripción de carpetas
+###  Descripción de carpetas
 
 - **Controllers/** → Contiene los controladores que manejan las rutas y lógica de la API.  
 - **Models/** → Define las entidades y modelos de datos usados por la aplicación.  
@@ -73,7 +73,7 @@ Base de Datos:
 
 ---
 
-🧪 Funcionalidades Disponibles
+ Funcionalidades Disponibles
 
 - Visualización de productos en formato de tabla  
 - Agregar nuevos productos mediante formulario  
